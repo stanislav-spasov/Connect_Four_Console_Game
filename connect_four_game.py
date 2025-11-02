@@ -77,6 +77,7 @@ def left_diagonal_win(matrix, col, row, current_sign):
             break
     return points >= CONNECT_FOUR
 
+
 def right_diagonal_win(matrix, col, row, current_sign):
     points = 1
     for i in range(1, CONNECT_FOUR):
@@ -93,11 +94,14 @@ def right_diagonal_win(matrix, col, row, current_sign):
             break
     return points >= CONNECT_FOUR
 
+
 def is_winner(ma, c, r, s):
-    return any([horizontal_win(ma,c,r,s,),
-                vertical_win(ma,c,r,s),
-                left_diagonal_win(ma,c,r,s),
-                right_diagonal_win(ma,c,r,s)])
+    return any([horizontal_win(ma, c, r, s, ),
+                vertical_win(ma, c, r, s),
+                left_diagonal_win(ma, c, r, s),
+                right_diagonal_win(ma, c, r, s)])
+
+
 rows = 6
 cols = 7
 game_field = [[0 for c in range(cols)] for r in range(rows)]
